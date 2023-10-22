@@ -42,12 +42,21 @@ html {
   }
 }
 
+.rules-container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(1rem, 4vw, 4rem);
+}
+
 .difficulty-container {
   display: flex;
   gap: 1rem;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 50vh;
 }
 
 .difficulty-container > button {
