@@ -10,6 +10,7 @@ function App() {
   const [currentScore, setCurrentScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
   const [difficulty, setDifficulty] = useState(0);
+  const [winCondition, setWinCondition] = useState();
 
   let currentCatArray = catArray;
 
@@ -18,12 +19,15 @@ function App() {
     switch (difficulty) {
       case 1:
         setCatArray(newArray.splice(0, 8));
+        setWinCondition(8);
         break;
       case 2:
         setCatArray(newArray.splice(0, 12));
+        setWinCondition(12);
         break;
       case 3:
         setCatArray(newArray);
+        setWinCondition(16);
         break;
     }
   }, [difficulty]);
@@ -84,7 +88,12 @@ function App() {
             setDifficulty={setDifficulty}
             resetGame={resetGame}
           />
-          <GameBoard catArray={catArray} guess={guess} />
+          <GameBoard
+            catArray={catArray}
+            guess={guess}
+            currentScore={currentScore}
+            winCondition={winCondition}
+          />
         </>
       )}
     </>

@@ -49,6 +49,7 @@ html {
   justify-content: center;
   align-items: center;
   font-size: clamp(1rem, 4vw, 4rem);
+  text-align: center;
 }
 
 .difficulty-container {
@@ -76,15 +77,20 @@ html {
 }
 
 .nav-container {
+  border-bottom: 2px solid white;
+}
+
+.nav-container > .wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
   max-width: 800px;
   margin: auto;
+  height: 80px;
 }
 
-.nav-container > button {
+.nav-container > .wrapper > button {
   all: unset;
   padding: 1rem;
   border: 2px solid white;
@@ -94,8 +100,41 @@ html {
   transition: 0.1s ease;
 }
 
-.nav-container > button:hover {
+.nav-container > .wrapper > button:hover {
   background-color: white;
   transform: scale(1.1);
   transition: 0.1s ease;
+}
+
+/********************************************/
+
+.you-win-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 82px);
+}
+
+.you-win-container > .firstCat {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+}
+
+.you-win-container > .secondCat {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 25%;
+}
+
+.select-disable {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }

@@ -14,11 +14,13 @@ export default function NavBar({
   }
   return (
     <>
-      <div className="nav-container">
-        <button onClick={goHome}>Home</button>
-        <h3> Score: {currentScore}</h3>
-        <h3> High Score: {highScore}</h3>
-        <button onClick={resetGame}>Reset Game</button>
+      <div className="nav-container select-disable">
+        <div className="wrapper">
+          <button onClick={goHome}>Home</button>
+          <h3> Score: {currentScore}</h3>
+          <h3> High Score: {highScore}</h3>
+          <button onClick={resetGame}>Reset Game</button>
+        </div>
       </div>
     </>
   );

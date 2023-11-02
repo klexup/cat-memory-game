@@ -10,7 +10,7 @@ function CatImage({ cat, id, guess }) {
       <img
         src={cat.image}
         alt="Loading Cat"
-        className="card"
+        className="card select-disable"
         draggable={false}
       />
     </div>

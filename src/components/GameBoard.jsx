@@ -1,7 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import CatImage from "./CatImage";
+import YouWin from "./YouWin";
 
-export default function GameBoard({ catArray, guess }) {
+export default function GameBoard({
+  catArray,
+  guess,
+  currentScore,
+  winCondition,
+}) {
+  if (winCondition === currentScore) {
+    return <YouWin />;
+  }
   return (
     <>
       <div className="gameboard-container">
