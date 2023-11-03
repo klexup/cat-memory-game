@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import CatImage from "./CatImage";
 import YouWin from "./YouWin";
+import Mistake from "./Mistake";
 
 export default function GameBoard({
   catArray,
   guess,
   currentScore,
   winCondition,
+  toggleMistake,
 }) {
+  if (toggleMistake) {
+    return <Mistake />;
+  }
   if (winCondition === currentScore) {
     return <YouWin />;
   }

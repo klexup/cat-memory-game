@@ -138,3 +138,12 @@ html {
   -o-user-select: none;
   user-select: none;
 }
+
+/**********/
+.you-failed-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}

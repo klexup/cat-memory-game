@@ -11,6 +11,7 @@ function App() {
   const [highScore, setHighScore] = useState(0);
   const [difficulty, setDifficulty] = useState(0);
   const [winCondition, setWinCondition] = useState();
+  const [toggleMistake, setToggleMistake] = useState(false);
 
   let currentCatArray = catArray;
 
@@ -52,6 +53,12 @@ function App() {
         const c = currentScore;
         setHighScore(c);
       }
+      setToggleMistake(() => {
+        setTimeout(() => {
+          setToggleMistake(false);
+        }, 1000);
+        return true;
+      });
       setCurrentGuesses([]);
       setCurrentScore(0);
       return;
@@ -93,6 +100,7 @@ function App() {
             guess={guess}
             currentScore={currentScore}
             winCondition={winCondition}
+            toggleMistake={toggleMistake}
           />
         </>
       )}
