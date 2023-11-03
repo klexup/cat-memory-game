@@ -8,7 +8,7 @@ export default function Mistake({ setToggleMistake }) {
           src="https://media2.giphy.com/media/rE5ivfsHKwcw9kyaBP/giphy.gif?cid=ecf05e47l2ok4lc45stpnalirjsv6jf9guknhx2wijwyyc1v&ep=v1_stickers_search&rid=giphy.gif&ct=s"
           alt="cat picture"
         />
-        <h1>you failed</h1>
+        <h1>You Failed!</h1>
         <button
           onClick={() => {
             setToggleMistake(false);
