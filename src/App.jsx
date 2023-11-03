@@ -54,9 +54,6 @@ function App() {
         setHighScore(c);
       }
       setToggleMistake(() => {
-        setTimeout(() => {
-          setToggleMistake(false);
-        }, 3000);
         return true;
       });
       setCurrentGuesses([]);
@@ -101,6 +98,7 @@ function App() {
             currentScore={currentScore}
             winCondition={winCondition}
             toggleMistake={toggleMistake}
+            setToggleMistake={setToggleMistake}
           />
         </>
       )}

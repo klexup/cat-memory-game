@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Mistake() {
+export default function Mistake({ setToggleMistake }) {
   return (
     <>
       <div className="you-failed-container">
@@ -9,7 +9,13 @@ export default function Mistake() {
           alt="cat picture"
         />
         <h1>you failed</h1>
-        <h1>Time to try again!</h1>
+        <button
+          onClick={() => {
+            setToggleMistake(false);
+          }}
+        >
+          Try Again
+        </button>
       </div>
     </>
   );

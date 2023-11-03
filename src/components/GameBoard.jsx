@@ -9,9 +9,10 @@ export default function GameBoard({
   currentScore,
   winCondition,
   toggleMistake,
+  setToggleMistake,
 }) {
   if (toggleMistake) {
-    return <Mistake />;
+    return <Mistake setToggleMistake={setToggleMistake} />;
   }
   if (winCondition === currentScore) {
     return <YouWin />;
