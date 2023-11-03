@@ -56,7 +56,7 @@ function App() {
       setToggleMistake(() => {
         setTimeout(() => {
           setToggleMistake(false);
-        }, 2000);
+        }, 3000);
         return true;
       });
       setCurrentGuesses([]);
